@@ -1,34 +1,17 @@
 {
-  "name": "fyzioboty",
-  "version": "1.0.0",
-  "private": true,
-  "description": "fyzioboty",
-  "author": "Mystypix",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^5.6.0",
-    "gatsby-plugin-image": "^3.6.0",
-    "gatsby-plugin-sharp": "^5.6.0",
-    "gatsby-source-filesystem": "^5.6.0",
-    "gatsby-transformer-sharp": "^5.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "gatsby-plugin-postcss": "^6.6.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "tailwindcss": "^3.2.6"
-  }
+	"name": "fyzioboty-astro",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.0.1",
+		"astro": "^2.0.13",
+		"tailwindcss": "^3.0.24"
+	}
 }
