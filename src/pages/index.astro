@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BootLinks from "../sections/BootLinks.astro";
 import EverySituation from "../sections/EverySituation.astro";
+import FixedBg from "../sections/FixedBg.astro";
+import Footer from "../sections/Footer.astro";
+import Info from "../sections/Info.astro";
 import Intro from "../sections/Intro.astro";
 import Reasons from "../sections/Reasons.astro";
 import Versions from "../sections/Versions.astro";
@@ -10,7 +14,11 @@ import Versions from "../sections/Versions.astro";
 	<main class='relative'>
 		<Intro />
 		<Reasons />
+		<FixedBg />
+		<Info />
 		<EverySituation />
 		<Versions />
+		<BootLinks />
+		<Footer />
 	</main>
 </Layout>
