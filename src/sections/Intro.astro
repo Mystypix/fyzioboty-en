@@ -1,5 +1,5 @@
 <video
-	class='h-screen w-full absolute object-cover top-0 left-0'
+	class='hidden lg:block h-screen w-full absolute object-cover top-0 left-0'
 	autoplay
 	muted
 	loop
@@ -7,29 +7,52 @@
 	<source src='public/intro-bg.webm' type='video/webm' />
 </video>
 <section
-	class='relative flex justify-center items-center h-screen w-full flex-col gap-y-6 bg-slate-600 bg-opacity-70 text-white font-thin'
+	class='relative flex justify-center items-center h-screen w-full flex-col gap-y-6 lg:bg-slate-600 lg:bg-opacity-70 text-white font-thin px-5 text-center bg-center bg-[url("/intro.jpg")] lg:bg-none'
 >
-	<h1 class='text-7xl mb-5'>Fyzio boty Ahinsha shoes</h1>
-	<h2 class='text-5xl'>Boty navržené fyzioterapeuty</h2>
-	<svg
-		class='absolute bottom-3 animate-pulse'
-		width='60'
-		viewBox='0 0 32 32'
-		xmlns='http://www.w3.org/2000/svg'
-		><defs
-			><style>
-				.cls-1 {
-					fill: #fff;
-				}
-			</style></defs
-		><title></title><g data-name='Layer 2' id='Layer_2'
-			><path
-				class='cls-1'
-				d='M16.47,16.88,26.34,7a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.42l9.61,9.61A.85.85,0,0,0,16.47,16.88Z'
-			></path><path
-				class='cls-1'
-				d='M16.47,26.46l9.87-9.88a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.41l9.61,9.62A.85.85,0,0,0,16.47,26.46Z'
-			></path></g
-		></svg
+	<div
+		class='absolute top-0 left-0 bottom-0 right-0 bg-slate-600 bg-opacity-60 lg:hidden'
 	>
+	</div>
+	<div class='z-10'>
+		<h1 class='text-4xl lg:text-7xl mb-5'>
+			Fyzio boty<br class='lg:hidden' />Ahinsha shoes
+		</h1>
+		<h2 class='text-2xl lg:text-5xl'>Boty navržené fyzioterapeuty</h2>
+		<svg
+			class='arrow absolute bottom-3 animate-pulse transition-all w-8 lg:w-14 left-2/4 -translate-x-1/2'
+			viewBox='0 0 32 32'
+			xmlns='http://www.w3.org/2000/svg'
+			><defs
+				><style>
+					.cls-1 {
+						fill: #fff;
+					}
+				</style></defs
+			><title></title><g data-name='Layer 2' id='Layer_2'
+				><path
+					class='cls-1'
+					d='M16.47,16.88,26.34,7a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.42l9.61,9.61A.85.85,0,0,0,16.47,16.88Z'
+				></path><path
+					class='cls-1'
+					d='M16.47,26.46l9.87-9.88a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.41l9.61,9.62A.85.85,0,0,0,16.47,26.46Z'
+				></path></g
+			></svg
+		>
+	</div>
 </section>
+
+<script>
+	const arrow = document.querySelector(".arrow");
+
+	function checkPosition() {
+		if (window.scrollY > 0) {
+			arrow.classList.add("opacity-0");
+			arrow.classList.remove("animate-pulse");
+		} else {
+			arrow.classList.add("animate-pulse");
+			arrow.classList.remove("opacity-0");
+		}
+	}
+
+	window.addEventListener("scroll", checkPosition);
+</script>
